@@ -1,0 +1,24 @@
+Assumption:- Setting a condition for executing a test
+if assumption meet the test will be executed else won't be executed
+package :- org.junit.jupiter.api package
+
+
+Dependency Injections
+Less tightly coupled classes
+Separation of concerns
+No need to manually create the instance ;we get it handed to us
+in our case no new BankAccount(0,0)anymore!
+
+
+
+--- surefire is used to generate test report
+for this u have to type this command in terminal
+mvn surefire-report:report
+
+
+Mockito:-
+when we need external objects
+Testing lib to help stubbing and mocking objects
+isolated  version of the objects instead of the real object
+
+
