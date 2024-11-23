@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testng">
+<!--    <test name="group">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="a1"></include>-->
+<!--                <include name="b1"></include>-->
+<!--                <exclude name="c1"></exclude>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="testNG.AnnotationCode"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Annotation">-->
+<!--        <parameter name="val" value="shiv kant"></parameter>-->
+<!--        <parameter name="valOther" value="Patna"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testNG.ParamterCode"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Chrome">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testNG.CrossBrowserTesting"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="FireFox">-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testNG.CrossBrowserTesting"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="parallel" parallel="methods" thread-count="2">
+        <classes>
+            <class name="testNG.ParallelTesting"></class>
+        </classes>
+    </test>
+
+    <test name="Anotation_rev">
+        <parameter name="a" value="10">   </parameter>
+        <parameter name="b" value="20"></parameter>
+
+        <classes>
+            <class name="testNG.rev.Paramters">
+
+            </class>
+
+        </classes>
+    </test>
+    <test name="Chrome">
+        <parameter name="browser" value="Chrome"></parameter>
+        <classes>
+            <class name="testNG.rev.CrossBrowserTestingCode"></class>
+        </classes>
+    </test>
+    <test name="Firefox">
+        <parameter name="browser" value="Firefox"></parameter>
+        <classes>
+            <class name="testNG.rev.CrossBrowserTestingCode"></class>
+        </classes>
+    </test>
+</suite>
