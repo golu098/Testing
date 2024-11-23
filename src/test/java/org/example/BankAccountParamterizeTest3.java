@@ -16,8 +16,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Assertions;
 
-@ExtendWith(BankAccountParameterResolver.class)
-public class BankAccountParamterizeTest {
+@ExtendWith(BankAccountParameterResolver4.class)
+public class BankAccountParamterizeTest3 {
 //    @RepeatedTest(5)
 //    @Test
     @ParameterizedTest

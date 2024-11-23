@@ -10,8 +10,8 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Execution(ExecutionMode.CONCURRENT)
-@ExtendWith(BankAccountParameterResolver.class)
-public class BankAccountParallelExecutionTest {
+@ExtendWith(BankAccountParameterResolver4.class)
+public class BankAccountParallelExecutionTest5 {
    @Test
     @DisplayName("deposit method")
     public  void testDeposit1(BankAccount bankAccount){

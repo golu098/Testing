@@ -8,8 +8,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ExtendWith(BankAccountParameterResolver.class)
-public class BankAccountDiTest {
+@ExtendWith(BankAccountParameterResolver4.class)
+public class BankAccountDiTest7 {
     @RepeatedTest(5)
 //    @Test
     @DisplayName("deposit method")

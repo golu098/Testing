@@ -4,7 +4,7 @@ public class BankAccount {
     private double balance;
     private double minimumBalance;
     private boolean isActive=true;
-private String holdername;
+    private String holdername;
     public BankAccount(double balance,double minimumBalance){
         this.balance=balance;
         this.minimumBalance=minimumBalance;

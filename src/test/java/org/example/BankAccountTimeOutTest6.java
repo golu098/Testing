@@ -1,5 +1,6 @@
 package org.example;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -8,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeFalse;
 
 @DisplayName("Bank Account Class ")
-
-public class BankAccountTimeOutTest {
+@ExtendWith(BankAccountParameterResolver4.class)
+public class BankAccountTimeOutTest6 {
    @Test
    @DisplayName("withdraw method")
    @Timeout(value = 500,unit = TimeUnit.MILLISECONDS)

@@ -3,7 +3,7 @@ package org.example;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.*;
 
-public class BankAccountConditionaltTest {
+public class BankAccountConditionaltTest8 {
     @Test
     @EnabledOnOs({OS.MAC})
     public void testMac(){

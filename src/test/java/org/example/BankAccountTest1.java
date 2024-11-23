@@ -1,29 +1,34 @@
 package org.example;
 import org.junit.jupiter.api.*;
 
+import org.junit.jupiter.params.ParameterizedTest;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeFalse;
 
 @DisplayName("Bank Account Class ")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class BankAccountTest {
+public class BankAccountTest1 {
    @Test
-   @DisplayName("withdraw method")
+   @DisplayName("Before Each")
+   @BeforeEach
     public  void testWithdraw(){
         BankAccount bankAccount=new BankAccount(500,-1000);
         bankAccount.withdraw(300);
         assertEquals(200,bankAccount.getBalance());
     }
     @Test
-    @DisplayName("deposit method")
+    @DisplayName("Before All")
+    @BeforeAll
     public  void testDeposit(){
         BankAccount bankAccount=new BankAccount(400,0);
         bankAccount.deposit(100);
 
-        assertEquals(900,bankAccount.getBalance());
+        assertEquals(500,bankAccount.getBalance());
     }
     @Test
     @DisplayName("deposit method")
+    @Before
     public  void testWithdrawNotStuckAtZero(){
         BankAccount bankAccount=new BankAccount(500,-1000);
         bankAccount.withdraw(800);
@@ -48,6 +53,7 @@ public class BankAccountTest {
     @Test
     @DisplayName("There is restriction that you can not withdraw if you have minimu limit amount reached")
     @Order(2)
+
     public  void minimumAmountNoWithdraw(){
        BankAccount bankAccount=new BankAccount(1000,2000);
        assertThrows(Exception.class,()->bankAccount.withdraw(20000));

@@ -4,11 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class CalculateMethodsTest {
+public class CalculateMethodsTest2 {
     private CalculateMethods calculateMethods;
     @BeforeEach
+
+    @Test
     public void initTest(){
         calculateMethods=new CalculateMethods();
+        System.out.println("hi");
     }
     @Test
     public  void testDivide(){
